@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<!-- Author: Shorouk Abdelaziz  https://shorouk.dev -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Socials</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      display: grid;
+      place-items: center;
+    }
+    .wrapper {
+      padding-top: 10px;
+      display: inline-flex;
+    }
+    .social {
+      background-color: #eae9e9;
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      position: relative;
+      margin: 10px;
+      cursor: pointer;
+    }
+    .social:hover {
+      color: #fff;
+    }
+    .icon {
+      font-size: 1.2em;
+    }
+    /* Hover styles for each social icon */
+    .blog:hover { background-color: #ffbd2f; }
+    .portfolio:hover { background-color: #088ee7; }
+    .email:hover { background-color: #23c8c8; }
+    .github:hover { background-color: #040204; }
+    .linkedin:hover { background-color: #0e76a8; }
+    .twitter:hover { background-color: #26a7de; }
+    .facebook:hover { background-color: #4267B2; }
+    .instagram:hover {
+      background: radial-gradient(circle, rgba(241,102,217,1) 10%, rgba(252,176,69,1) 76%, rgba(253,29,29,1) 100%);
+    }
+    .youtube:hover { background-color: #FF0000; }
+    .telegram:hover { background-color: #2AABEE; }
+    /* New icons hover styles */
+    .leetcode:hover { background-color: #FFA500; }
+    .hackerrank:hover { background-color: #2EC866; }
+    .whatsapp:hover { background-color: #25D366; }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <!-- Email Icon -->
+    <div id="email" onclick="navigate(this.id)" class="social email">
+      <span class="icon"><i class="fa-solid fa-envelope"></i></span>
+    </div>
+    <!-- Blog Icon -->
+    <!-- <div id="blog" onclick="navigate(this.id)" class="social blog">
+      <span class="icon"><i class="fa-solid fa-blog"></i></span>
+    </div> -->
+    <!-- Portfolio Icon -->
+    <div id="portfolio" onclick="navigate(this.id)" class="social portfolio">
+      <span class="icon"><i class="fa-solid fa-user"></i></span>
+    </div>
+    <!-- GitHub Icon -->
+    <div id="github" onclick="navigate(this.id)" class="social github">
+      <span class="icon"><i class="fa-brands fa-github"></i></span>
+    </div>
+    <!-- LinkedIn Icon -->
+    <div id="linkedin" onclick="navigate(this.id)" class="social linkedin">
+      <span class="icon"><i class="fab fa-linkedin"></i></span>
+    </div>
+    <!-- LeetCode Icon -->
+    <div id="leetcode" onclick="navigate(this.id)" class="social leetcode">
+      <span class="icon"><i class="fa-solid fa-code"></i></span>
+    </div>
+    <!-- HackerRank Icon -->
+    <div id="hackerrank" onclick="navigate(this.id)" class="social hackerrank">
+      <span class="icon"><i class="fa-brands fa-hackerrank"></i></span>
+    </div>
+    <!-- Twitter Icon -->
+    <div id="twitter" onclick="navigate(this.id)" class="social twitter">
+      <span class="icon"><i class="fab fa-twitter"></i></span>
+    </div>
+    <!-- Facebook Icon -->
+    <div id="facebook" onclick="navigate(this.id)" class="social facebook">
+      <span class="icon"><i class="fab fa-facebook"></i></span>
+    </div>
+    <!-- Instagram Icon -->
+    <div id="instagram" onclick="navigate(this.id)" class="social instagram">
+      <span class="icon"><i class="fab fa-instagram"></i></span>
+    </div>
+    <!-- YouTube Icon -->
+    <div id="youtube" onclick="navigate(this.id)" class="social youtube">
+      <span class="icon"><i class="fab fa-youtube"></i></span>
+    </div>
+    <!-- Telegram Icon -->
+    <div id="telegram" onclick="navigate(this.id)" class="social telegram">
+      <span class="icon"><i class="fab fa-telegram"></i></span>
+    </div>
+    <!-- WhatsApp Icon -->
+    <div id="whatsapp" onclick="navigate(this.id)" class="social whatsapp">
+      <span class="icon"><i class="fab fa-whatsapp"></i></span>
+    </div>
+  </div>
+
+  <script>
+    function navigate(id) {
+      // Open URLs in a new window/tab; update these with your actual URLs
+      if (id === "email") {
+        window.open("mailto:Prashant.saini.3150@gmail.com", '_blank').focus();
+      } else if (id === "blog") {
+        window.open("", '_blank').focus();
+      } else if (id === "portfolio") {
+        window.open("https://prashant-pi.vercel.app/", '_blank').focus();
+      } else if (id === "github") {
+        window.open("https://github.com/prashantsaini1525", '_blank').focus();
+      } else if (id === "linkedin") {
+        window.open("https://www.linkedin.com/in/prashantssaini/", '_blank').focus();
+      } else if (id === "leetcode") {
+        window.open("https://leetcode.com/u/prashantsainii/", '_blank').focus();
+      } else if (id === "hackerrank") {
+        window.open("https://www.hackerrank.com/profile/Prashant_saini_1", '_blank').focus();
+      } else if (id === "twitter") {
+        window.open("https://x.com/Prashan58889893", '_blank').focus();
+      } else if (id === "facebook") {
+        window.open("https://www.facebook.com/prashant.saini.31508076/", '_blank').focus();
+      } else if (id === "instagram") {
+        window.open("https://instagram.com/prashant_saini_1525", '_blank').focus();
+      } else if (id === "youtube") {
+        window.open("https://www.youtube.com/@prashant_saini_1525", '_blank').focus();
+      } else if (id === "telegram") {
+        window.open("https://t.me/prashant_2515", '_blank').focus();
+      } else if (id === "whatsapp") {
+        window.open("https://wa.me/9557745536", '_blank').focus();
+      }
+    }
+  </script>
+</body>
+</html>
