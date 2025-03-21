@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Montserrat:900" />
+    <title>Count Down</title>
+    <style>
+        /* Overall page styling */
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #1e1e1e, #2c2c2c);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        /* Timer container with a glassmorphism effect */
+        #timer {
+            text-align: center;
+            text-transform: uppercase;
+            font-family: "Lato", sans-serif;
+            letter-spacing: 2px;
+            padding: 20px 30px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+        }
+
+        /* Style for each time block */
+        .days,
+        .hours,
+        .minutes,
+        .seconds {
+            display: inline-block;
+            padding: 20px;
+            width: 120px;
+            border-radius: 10px;
+            margin: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        /* Scale effect on hover for a bit of interactivity */
+        .days:hover,
+        .hours:hover,
+        .minutes:hover,
+        .seconds:hover {
+            transform: scale(1.05);
+        }
+
+        /* Individual block backgrounds */
+        .days {
+            background: linear-gradient(135deg, #ff6b6b, #ff4757);
+        }
+
+        .hours {
+            background: linear-gradient(135deg, #a4b0be, #747d8c);
+            color: #2f3542;
+        }
+
+        .minutes {
+            background: linear-gradient(135deg, #1e90ff, #3742fa);
+        }
+
+        .seconds {
+            background: linear-gradient(135deg, #f6e58d, #f9ca24);
+        }
+
+        /* Numbers styling */
+        .numbers {
+            font-family: "Montserrat", sans-serif;
+            color: #ffffff;
+            font-size: 3.5em;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="timer">
+        <div class="days">
+            <div id="days" class="numbers"></div>
+            days
+        </div>
+        <div class="hours">
+            <div id="hours" class="numbers"></div>
+            hours
+        </div>
+        <div class="minutes">
+            <div id="minutes" class="numbers"></div>
+            minutes
+        </div>
+        <div class="seconds">
+            <div id="seconds" class="numbers"></div>
+            seconds
+        </div>
+    </div>
+</body>
+<script>
+    const myDate = new Date("July 07, 2025 00:00:00");
+    console.log(myDate);
+
+    // countdown updated every 1 second (1000 ms)
+    let timer = setInterval(function () {
+        // get today's date in milliseconds
+        const today = new Date().getTime();
+        // calculate the difference
+        const diff = myDate - today;
+
+        // math calculations
+        let days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        let hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        let minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        let seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+        // display results in respective elements
+        document.getElementById("days").innerHTML = days;
+        document.getElementById("hours").innerHTML = hours;
+        document.getElementById("minutes").innerHTML = minutes;
+        document.getElementById("seconds").innerHTML = seconds;
+    }, 1000);
+</script>
+
+</html>
