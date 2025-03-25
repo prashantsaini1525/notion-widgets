@@ -51,3 +51,6 @@ Custom-built widgets designed specifically for enhancing your Notion workspace â
 
 - **Customize Timetable:**  
   Adjust the timetable view to suit your scheduling needs.
+
+## ðŸ“„ License
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
